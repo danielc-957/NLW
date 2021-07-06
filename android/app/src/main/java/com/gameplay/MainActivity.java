@@ -1,6 +1,8 @@
 package com.gameplay;
 
 import com.facebook.react.ReactActivity;
+import android.os.Bundle;
+import com.zoontek.rnbootsplash.RNBootSplash;
 
 public class MainActivity extends ReactActivity {
 
@@ -12,4 +14,10 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "gameplay";
   }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+      RNBootSplash.init(R.drawable.background_splash, MainActivity.this);
+    }
 }
